@@ -1,0 +1,18 @@
+[package]
+name = "tonic-grpc"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "user"
+path = "src/user/server.rs"
+
+
+[dependencies]
+tokio = { version = "1.40.0", features = ["full"] }
+tonic = "0.12.2"
+prost = "0.13.3"
+tonic-reflection = {version = "0.12.2"}
+
+[build-dependencies]
+tonic-build = "0.12.2"
